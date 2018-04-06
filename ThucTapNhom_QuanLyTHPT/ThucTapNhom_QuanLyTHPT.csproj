@@ -52,6 +52,7 @@
     <Compile Include="DATA\SqlConn.cs" />
     <Compile Include="ENTITY\BangDiem.cs" />
     <Compile Include="ENTITY\ChucVu.cs" />
+    <Compile Include="ENTITY\GiangDay.cs" />
     <Compile Include="ENTITY\GiaoVien.cs" />
     <Compile Include="ENTITY\HocSinh.cs" />
     <Compile Include="ENTITY\LopHoc.cs" />

@@ -83,7 +83,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc
         {
             LockControl();
             pnlThongTin_LopHoc.Visible = true;
-            dgvLopHoc.Height = 4;
+            dgvLopHoc.Height = 426;
 
             if (dgvLopHoc.Rows.Count > 0)
             {
