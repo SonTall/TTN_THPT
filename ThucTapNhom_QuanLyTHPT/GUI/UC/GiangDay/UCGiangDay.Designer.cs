@@ -39,6 +39,10 @@
             this.btnSearch_GiangDay = new System.Windows.Forms.Button();
             this.dgvGiangDay = new System.Windows.Forms.DataGridView();
             this.pnlThongTin_GiangDay = new System.Windows.Forms.Panel();
+            this.txtSoTiet = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtThu = new System.Windows.Forms.TextBox();
+            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtTiet = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,10 +54,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaGiaoVien = new System.Windows.Forms.TextBox();
             this.lbMaGiaoVien = new System.Windows.Forms.Label();
-            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
-            this.txtThu = new System.Windows.Forms.TextBox();
-            this.txtSoTiet = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.colGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -219,6 +219,40 @@
             this.pnlThongTin_GiangDay.Size = new System.Drawing.Size(1171, 133);
             this.pnlThongTin_GiangDay.TabIndex = 11;
             // 
+            // txtSoTiet
+            // 
+            this.txtSoTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoTiet.Location = new System.Drawing.Point(935, 50);
+            this.txtSoTiet.Name = "txtSoTiet";
+            this.txtSoTiet.Size = new System.Drawing.Size(209, 23);
+            this.txtSoTiet.TabIndex = 66;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(866, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 20);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Số tiết";
+            // 
+            // txtThu
+            // 
+            this.txtThu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThu.Location = new System.Drawing.Point(541, 50);
+            this.txtThu.Name = "txtThu";
+            this.txtThu.Size = new System.Drawing.Size(255, 23);
+            this.txtThu.TabIndex = 64;
+            // 
+            // txtMaMonHoc
+            // 
+            this.txtMaMonHoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMonHoc.Location = new System.Drawing.Point(541, 8);
+            this.txtMaMonHoc.Name = "txtMaMonHoc";
+            this.txtMaMonHoc.Size = new System.Drawing.Size(255, 23);
+            this.txtMaMonHoc.TabIndex = 63;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -342,42 +376,9 @@
             this.lbMaGiaoVien.TabIndex = 33;
             this.lbMaGiaoVien.Text = "Mã giáo viên";
             // 
-            // txtMaMonHoc
-            // 
-            this.txtMaMonHoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMonHoc.Location = new System.Drawing.Point(541, 8);
-            this.txtMaMonHoc.Name = "txtMaMonHoc";
-            this.txtMaMonHoc.Size = new System.Drawing.Size(255, 23);
-            this.txtMaMonHoc.TabIndex = 63;
-            // 
-            // txtThu
-            // 
-            this.txtThu.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThu.Location = new System.Drawing.Point(541, 50);
-            this.txtThu.Name = "txtThu";
-            this.txtThu.Size = new System.Drawing.Size(255, 23);
-            this.txtThu.TabIndex = 64;
-            // 
-            // txtSoTiet
-            // 
-            this.txtSoTiet.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTiet.Location = new System.Drawing.Point(935, 50);
-            this.txtSoTiet.Name = "txtSoTiet";
-            this.txtSoTiet.Size = new System.Drawing.Size(209, 23);
-            this.txtSoTiet.TabIndex = 66;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(866, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(50, 20);
-            this.label5.TabIndex = 65;
-            this.label5.Text = "Số tiết";
-            // 
             // colGiaoVien
             // 
+            this.colGiaoVien.DataPropertyName = "magiaovien";
             this.colGiaoVien.HeaderText = "Mã giáo viên";
             this.colGiaoVien.Name = "colGiaoVien";
             this.colGiaoVien.ReadOnly = true;

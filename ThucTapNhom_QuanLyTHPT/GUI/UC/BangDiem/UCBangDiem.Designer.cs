@@ -39,6 +39,10 @@
             this.btnSearch_BangDiem = new System.Windows.Forms.Button();
             this.dgvBangDiem = new System.Windows.Forms.DataGridView();
             this.pnlThongTin_BangDiem = new System.Windows.Forms.Panel();
+            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
+            this.txtNamHoc = new System.Windows.Forms.TextBox();
+            this.txtDiemTrungBinh = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtHocKy = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -50,10 +54,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaHocSinh = new System.Windows.Forms.TextBox();
             this.lbMaLop = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtDiemTrungBinh = new System.Windows.Forms.TextBox();
-            this.txtNamHoc = new System.Windows.Forms.TextBox();
-            this.txtMaMonHoc = new System.Windows.Forms.TextBox();
             this.colMaHocSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaGiaoVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -219,6 +219,40 @@
             this.pnlThongTin_BangDiem.Size = new System.Drawing.Size(1171, 137);
             this.pnlThongTin_BangDiem.TabIndex = 11;
             // 
+            // txtMaMonHoc
+            // 
+            this.txtMaMonHoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaMonHoc.Location = new System.Drawing.Point(504, 9);
+            this.txtMaMonHoc.Name = "txtMaMonHoc";
+            this.txtMaMonHoc.Size = new System.Drawing.Size(255, 23);
+            this.txtMaMonHoc.TabIndex = 66;
+            // 
+            // txtNamHoc
+            // 
+            this.txtNamHoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNamHoc.Location = new System.Drawing.Point(504, 53);
+            this.txtNamHoc.Name = "txtNamHoc";
+            this.txtNamHoc.Size = new System.Drawing.Size(255, 23);
+            this.txtNamHoc.TabIndex = 65;
+            // 
+            // txtDiemTrungBinh
+            // 
+            this.txtDiemTrungBinh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiemTrungBinh.Location = new System.Drawing.Point(920, 50);
+            this.txtDiemTrungBinh.Name = "txtDiemTrungBinh";
+            this.txtDiemTrungBinh.Size = new System.Drawing.Size(233, 23);
+            this.txtDiemTrungBinh.TabIndex = 64;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(802, 55);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(112, 17);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "Điểm trung bình";
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -342,40 +376,6 @@
             this.lbMaLop.TabIndex = 33;
             this.lbMaLop.Text = "Mã học sinh";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(802, 55);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(112, 17);
-            this.label5.TabIndex = 63;
-            this.label5.Text = "Điểm trung bình";
-            // 
-            // txtDiemTrungBinh
-            // 
-            this.txtDiemTrungBinh.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiemTrungBinh.Location = new System.Drawing.Point(920, 50);
-            this.txtDiemTrungBinh.Name = "txtDiemTrungBinh";
-            this.txtDiemTrungBinh.Size = new System.Drawing.Size(233, 23);
-            this.txtDiemTrungBinh.TabIndex = 64;
-            // 
-            // txtNamHoc
-            // 
-            this.txtNamHoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNamHoc.Location = new System.Drawing.Point(504, 53);
-            this.txtNamHoc.Name = "txtNamHoc";
-            this.txtNamHoc.Size = new System.Drawing.Size(255, 23);
-            this.txtNamHoc.TabIndex = 65;
-            // 
-            // txtMaMonHoc
-            // 
-            this.txtMaMonHoc.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaMonHoc.Location = new System.Drawing.Point(504, 9);
-            this.txtMaMonHoc.Name = "txtMaMonHoc";
-            this.txtMaMonHoc.Size = new System.Drawing.Size(255, 23);
-            this.txtMaMonHoc.TabIndex = 66;
-            // 
             // colMaHocSinh
             // 
             this.colMaHocSinh.DataPropertyName = "mahocsinh";
@@ -414,7 +414,7 @@
             // colHocKy
             // 
             this.colHocKy.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colHocKy.DataPropertyName = "hocky";
+            this.colHocKy.DataPropertyName = "hocki";
             this.colHocKy.HeaderText = "Học kỳ";
             this.colHocKy.Name = "colHocKy";
             this.colHocKy.ReadOnly = true;

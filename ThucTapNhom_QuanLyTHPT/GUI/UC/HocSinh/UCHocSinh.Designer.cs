@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCHocSinh));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSearch_HocSinh = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnXoa_HocSinh = new System.Windows.Forms.Button();
@@ -39,6 +39,8 @@
             this.txtSearch_HocSinh = new System.Windows.Forms.TextBox();
             this.pnlBody_HocSinh = new System.Windows.Forms.Panel();
             this.pnlThongTin = new System.Windows.Forms.Panel();
+            this.rbNu = new System.Windows.Forms.RadioButton();
+            this.rbNam = new System.Windows.Forms.RadioButton();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.btnLuu_HocSinh = new System.Windows.Forms.Button();
             this.btnClearText_HocSinh = new System.Windows.Forms.Button();
@@ -75,8 +77,6 @@
             this.colThongTinPhuHuynh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSdtLienHe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rbNu = new System.Windows.Forms.RadioButton();
-            this.rbNam = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             this.pnlBody_HocSinh.SuspendLayout();
             this.pnlThongTin.SuspendLayout();
@@ -223,6 +223,28 @@
             this.pnlThongTin.Size = new System.Drawing.Size(1171, 179);
             this.pnlThongTin.TabIndex = 8;
             // 
+            // rbNu
+            // 
+            this.rbNu.AutoSize = true;
+            this.rbNu.Location = new System.Drawing.Point(152, 143);
+            this.rbNu.Name = "rbNu";
+            this.rbNu.Size = new System.Drawing.Size(39, 17);
+            this.rbNu.TabIndex = 61;
+            this.rbNu.TabStop = true;
+            this.rbNu.Text = "Nữ";
+            this.rbNu.UseVisualStyleBackColor = true;
+            // 
+            // rbNam
+            // 
+            this.rbNam.AutoSize = true;
+            this.rbNam.Location = new System.Drawing.Point(99, 143);
+            this.rbNam.Name = "rbNam";
+            this.rbNam.Size = new System.Drawing.Size(47, 17);
+            this.rbNam.TabIndex = 60;
+            this.rbNam.TabStop = true;
+            this.rbNam.Text = "Nam";
+            this.rbNam.UseVisualStyleBackColor = true;
+            // 
             // dtNgaySinh
             // 
             this.dtNgaySinh.AllowDrop = true;
@@ -247,6 +269,7 @@
             this.btnLuu_HocSinh.TabIndex = 56;
             this.btnLuu_HocSinh.Text = "Lưu";
             this.btnLuu_HocSinh.UseVisualStyleBackColor = false;
+            this.btnLuu_HocSinh.Click += new System.EventHandler(this.btnLuu_HocSinh_Click);
             // 
             // btnClearText_HocSinh
             // 
@@ -481,14 +504,14 @@
             this.colThongTinPhuHuynh,
             this.colSdtLienHe,
             this.colMaLop});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvHocSinh.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvHocSinh.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvHocSinh.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvHocSinh.Location = new System.Drawing.Point(0, 0);
             this.dgvHocSinh.Name = "dgvHocSinh";
@@ -588,28 +611,6 @@
             this.colMaLop.HeaderText = "Mã lớp";
             this.colMaLop.Name = "colMaLop";
             this.colMaLop.ReadOnly = true;
-            // 
-            // rbNu
-            // 
-            this.rbNu.AutoSize = true;
-            this.rbNu.Location = new System.Drawing.Point(152, 143);
-            this.rbNu.Name = "rbNu";
-            this.rbNu.Size = new System.Drawing.Size(39, 17);
-            this.rbNu.TabIndex = 61;
-            this.rbNu.TabStop = true;
-            this.rbNu.Text = "Nữ";
-            this.rbNu.UseVisualStyleBackColor = true;
-            // 
-            // rbNam
-            // 
-            this.rbNam.AutoSize = true;
-            this.rbNam.Location = new System.Drawing.Point(99, 143);
-            this.rbNam.Name = "rbNam";
-            this.rbNam.Size = new System.Drawing.Size(47, 17);
-            this.rbNam.TabIndex = 60;
-            this.rbNam.TabStop = true;
-            this.rbNam.Text = "Nam";
-            this.rbNam.UseVisualStyleBackColor = true;
             // 
             // UCHocSinh
             // 

@@ -50,6 +50,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc
 
         private void UCLopHoc_Load(object sender, EventArgs e)
         {
+            loadDataGirdView();
             pnlThongTin_LopHoc.Visible = false;
             dgvLopHoc.Height = this.Height;
         }
@@ -124,8 +125,18 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc
             ClearText();
         }
 
+        private void loadDataGirdView()
+        {
+            DATA.SqlConn sql = new DATA.SqlConn();
+            dgvLopHoc.DataSource = sql.getDataTable("Lop");
+        }
+
         private void btnLuu_LopHoc_Click(object sender, EventArgs e)
         {
+            ENTITY.LopHoc l = new ENTITY.LopHoc(txtMaLopHoc.Text.Trim(), txtTenLopHoc.Text.Trim(), dtNgayBatDau.Value, dtNgayKetThuc.Value, txtMaGiaoVienChuNhiem.Text.Trim());
+            DATA.LopHoc_Controler lh = new DATA.LopHoc_Controler();
+            lh.insertLopHoc(l);
+            loadDataGirdView();
             LockControl();
         }
 

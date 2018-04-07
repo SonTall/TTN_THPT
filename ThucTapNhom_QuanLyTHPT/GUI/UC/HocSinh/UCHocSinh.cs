@@ -74,25 +74,26 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.HocSinh
         #endregion
         private void UCHocSinh_Load(object sender, EventArgs e)
         {
+            loadDataGirdView();
             LockControl();
             pnlThongTin.Visible = false;
             dgvHocSinh.Height = this.Height;
             #region testdata
-            for (int i = 0; i < 30; i++)
-            {
-                i = dgvHocSinh.Rows.Add();
-                dgvHocSinh.Rows[i].Cells[0].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[1].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[2].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[3].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[4].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[5].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[6].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[7].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[8].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[9].Value = "haha";
-                dgvHocSinh.Rows[i].Cells[10].Value = "huhu";
-            }
+            //for (int i = 0; i < 30; i++)
+            //{
+            //    i = dgvHocSinh.Rows.Add();
+            //    dgvHocSinh.Rows[i].Cells[0].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[1].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[2].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[3].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[4].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[5].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[6].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[7].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[8].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[9].Value = "haha";
+            //    dgvHocSinh.Rows[i].Cells[10].Value = "huhu";
+            //}
             
             #endregion
         }
@@ -181,6 +182,35 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.HocSinh
         private void btnSua_HocSinh_Click(object sender, EventArgs e)
         {
             OpenControl();
+        }
+
+        private void loadDataGirdView()
+        {
+            DATA.SqlConn sql = new DATA.SqlConn();
+            dgvHocSinh.DataSource = sql.getDataTable("HocSinh");
+        }
+
+        private bool checkGioiTinh()
+        {
+            bool gioitinh;
+            if (rbNam.Checked==true)
+            {
+                gioitinh = true;
+            }
+            else
+            {
+                gioitinh = false;
+            }
+            return gioitinh;
+        }
+
+        private void btnLuu_HocSinh_Click(object sender, EventArgs e)
+        {
+            ENTITY.HocSinh hs = new ENTITY.HocSinh(txtMaHocSinh.Text.Trim(), txtHoTen.Text.Trim(), checkGioiTinh(), dtNgaySinh.Value, txtDanToc.Text.Trim(), txtTonGiao.Text.Trim(), txtDiaChi.Text.Trim(), txtQueQuan.Text.Trim(), txtThongTinPhuHuynh.Text.Trim(), txtSdtLienHe.Text.Trim(), txtMaLop.Text.Trim());
+            DATA.HocSinh_Controler h = new DATA.HocSinh_Controler();
+            h.insertHocSinh(hs);
+            loadDataGirdView();
+            LockControl();
         }
     }
 }

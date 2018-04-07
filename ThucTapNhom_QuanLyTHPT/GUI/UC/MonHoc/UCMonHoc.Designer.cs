@@ -38,8 +38,6 @@
             this.txtSearch_MonHoc = new System.Windows.Forms.TextBox();
             this.btnSearch_MonHoc = new System.Windows.Forms.Button();
             this.dgvMonHoc = new System.Windows.Forms.DataGridView();
-            this.colMaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlThongTin_MonHoc = new System.Windows.Forms.Panel();
             this.btnLuu_MonHoc = new System.Windows.Forms.Button();
             this.btnClearText_MonHoc = new System.Windows.Forms.Button();
@@ -48,6 +46,8 @@
             this.txtTenMonHoc = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.colMaMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMonHoc)).BeginInit();
             this.pnlThongTin_MonHoc.SuspendLayout();
@@ -177,21 +177,6 @@
             this.dgvMonHoc.TabIndex = 10;
             this.dgvMonHoc.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvMonHoc_MouseClick);
             // 
-            // colMaMonHoc
-            // 
-            this.colMaMonHoc.DataPropertyName = "mamonhoc";
-            this.colMaMonHoc.HeaderText = "Mã môn học";
-            this.colMaMonHoc.Name = "colMaMonHoc";
-            this.colMaMonHoc.ReadOnly = true;
-            // 
-            // colTenMonHoc
-            // 
-            this.colTenMonHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTenMonHoc.DataPropertyName = "tenchucvu";
-            this.colTenMonHoc.HeaderText = "Tên môn học";
-            this.colTenMonHoc.Name = "colTenMonHoc";
-            this.colTenMonHoc.ReadOnly = true;
-            // 
             // pnlThongTin_MonHoc
             // 
             this.pnlThongTin_MonHoc.BackColor = System.Drawing.Color.White;
@@ -292,6 +277,21 @@
             this.label1.Size = new System.Drawing.Size(91, 17);
             this.label1.TabIndex = 35;
             this.label1.Text = "Tên môn học";
+            // 
+            // colMaMonHoc
+            // 
+            this.colMaMonHoc.DataPropertyName = "mamonhoc";
+            this.colMaMonHoc.HeaderText = "Mã môn học";
+            this.colMaMonHoc.Name = "colMaMonHoc";
+            this.colMaMonHoc.ReadOnly = true;
+            // 
+            // colTenMonHoc
+            // 
+            this.colTenMonHoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenMonHoc.DataPropertyName = "tenmonhoc";
+            this.colTenMonHoc.HeaderText = "Tên môn học";
+            this.colTenMonHoc.Name = "colTenMonHoc";
+            this.colTenMonHoc.ReadOnly = true;
             // 
             // UCMonHoc
             // 

@@ -49,6 +49,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DATA\BangDiem_Controler.cs" />
+    <Compile Include="DATA\ChucVu_Controler.cs" />
+    <Compile Include="DATA\GiangDay_Controler.cs" />
+    <Compile Include="DATA\GiaoVien_Controler.cs" />
+    <Compile Include="DATA\HocSinh_Controler.cs" />
+    <Compile Include="DATA\LopHoc_Controler.cs" />
+    <Compile Include="DATA\MonHoc_Controler.cs" />
     <Compile Include="DATA\SqlConn.cs" />
     <Compile Include="ENTITY\BangDiem.cs" />
     <Compile Include="ENTITY\ChucVu.cs" />

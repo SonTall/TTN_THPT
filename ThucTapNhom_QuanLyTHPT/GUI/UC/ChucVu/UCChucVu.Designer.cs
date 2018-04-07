@@ -38,6 +38,8 @@
             this.txtSearch_ChucVu = new System.Windows.Forms.TextBox();
             this.btnSearch_ChucVu = new System.Windows.Forms.Button();
             this.dgvChucVu = new System.Windows.Forms.DataGridView();
+            this.colMaChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtTenChucVu = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@
             this.btnClearText_ChucVu = new System.Windows.Forms.Button();
             this.btnLuu_ChucVu = new System.Windows.Forms.Button();
             this.pnlThongTin_ChucVu = new System.Windows.Forms.Panel();
-            this.colMaChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChucVu)).BeginInit();
             this.pnlThongTin_ChucVu.SuspendLayout();
@@ -66,6 +66,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1171, 69);
             this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // btnXoa_ChucVu
             // 
@@ -177,6 +178,21 @@
             this.dgvChucVu.TabIndex = 9;
             this.dgvChucVu.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvChucVu_MouseClick);
             // 
+            // colMaChucVu
+            // 
+            this.colMaChucVu.DataPropertyName = "machucvu";
+            this.colMaChucVu.HeaderText = "Mã chức vụ";
+            this.colMaChucVu.Name = "colMaChucVu";
+            this.colMaChucVu.ReadOnly = true;
+            // 
+            // colTenChucVu
+            // 
+            this.colTenChucVu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colTenChucVu.DataPropertyName = "tenchucvu";
+            this.colTenChucVu.HeaderText = "Tên chức vụ";
+            this.colTenChucVu.Name = "colTenChucVu";
+            this.colTenChucVu.ReadOnly = true;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -277,21 +293,6 @@
             this.pnlThongTin_ChucVu.Name = "pnlThongTin_ChucVu";
             this.pnlThongTin_ChucVu.Size = new System.Drawing.Size(1171, 60);
             this.pnlThongTin_ChucVu.TabIndex = 10;
-            // 
-            // colMaChucVu
-            // 
-            this.colMaChucVu.DataPropertyName = "machucvu";
-            this.colMaChucVu.HeaderText = "Mã chức vụ";
-            this.colMaChucVu.Name = "colMaChucVu";
-            this.colMaChucVu.ReadOnly = true;
-            // 
-            // colTenChucVu
-            // 
-            this.colTenChucVu.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colTenChucVu.DataPropertyName = "tenchucvu";
-            this.colTenChucVu.HeaderText = "Tên chức vụ";
-            this.colTenChucVu.Name = "colTenChucVu";
-            this.colTenChucVu.ReadOnly = true;
             // 
             // UCChucVu
             // 

@@ -53,6 +53,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiangDay
 
         private void UCGiangDay_Load(object sender, EventArgs e)
         {
+            loadDataGirdView();
             pnlThongTin_GiangDay.Visible = false;
             dgvGiangDay.Height = this.Height;
         }
@@ -138,8 +139,18 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiangDay
             ClearText();
         }
 
+        private void loadDataGirdView()
+        {
+            DATA.SqlConn sql = new DATA.SqlConn();
+            dgvGiangDay.DataSource = sql.getDataTable("GiangDay");
+        }
+
         private void btnLuu_GiangDay_Click(object sender, EventArgs e)
         {
+            ENTITY.GiangDay gd = new ENTITY.GiangDay(txtMaGiaoVien.Text.Trim(), txtMaLop.Text.Trim(), txtMaMonHoc.Text.Trim(), txtThu.Text.Trim(), int.Parse(txtTiet.Text.Trim()), int.Parse(txtSoTiet.Text.Trim()));
+            DATA.GiangDay_Controler g = new DATA.GiangDay_Controler();
+            g.insertGiangDay(gd);
+            loadDataGirdView();
             LockControl();
         }
     }

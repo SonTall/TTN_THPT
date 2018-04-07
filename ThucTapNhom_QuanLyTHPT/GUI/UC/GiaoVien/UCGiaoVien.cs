@@ -72,6 +72,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiaoVien
 
         private void UCGiaoVien_Load(object sender, EventArgs e)
         {
+            loadDataGirdView();
             pnlThongTin_GiaoVien.Visible = false;
             dgvGiaoVien.Height = this.Height;
         }
@@ -161,8 +162,32 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiaoVien
             ClearText();
         }
 
+        private void loadDataGirdView()
+        {
+            DATA.SqlConn sql = new DATA.SqlConn();
+            dgvGiaoVien.DataSource = sql.getDataTable("GiaoVien");
+        }
+
+        private bool checkGioiTinh()
+        {
+            bool gioitinh;
+            if (rbNam.Checked==true)
+            {
+                gioitinh = true;
+            }
+            else
+            {
+                gioitinh = false;
+            }
+            return gioitinh;
+        }
+
         private void btnLuu_GiaoVien_Click(object sender, EventArgs e)
         {
+            ENTITY.GiaoVien gv = new ENTITY.GiaoVien(txtMaGiaoVien.Text.Trim(), txtTenGiaoVien.Text.Trim(), checkGioiTinh(), dtNgaySinh.Value, txtDiaChi.Text.Trim(), txtQueQuan.Text.Trim(), txtSdt.Text.Trim(), txtTrinhDo.Text.Trim(), float.Parse(txtLuongCoBan.Text.Trim()), txtMaChucVu.Text.Trim());
+            DATA.GiaoVien_Controler g = new DATA.GiaoVien_Controler();
+            g.insertGiaoVien(gv);
+            loadDataGirdView();
             LockControl();
         }
     }

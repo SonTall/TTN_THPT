@@ -45,6 +45,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.MonHoc
 
         private void UCMonHoc_Load(object sender, EventArgs e)
         {
+            loadDataGirdView();
             pnlThongTin_MonHoc.Visible = false;
             dgvMonHoc.Height = this.Height;
         }
@@ -115,8 +116,18 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.MonHoc
             ClearText();
         }
 
+        private void loadDataGirdView()
+        {
+            DATA.SqlConn sql = new DATA.SqlConn();
+            dgvMonHoc.DataSource = sql.getDataTable("MonHoc");
+        }
+
         private void btnLuu_MonHoc_Click(object sender, EventArgs e)
         {
+            ENTITY.MonHoc mh = new ENTITY.MonHoc(txtMaMonHoc.Text.Trim(), txtTenMonHoc.Text.Trim());
+            DATA.MonHoc_Controler m = new DATA.MonHoc_Controler();
+            m.insertMonHoc(mh);
+            loadDataGirdView();
             LockControl();
         }
 

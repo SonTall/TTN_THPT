@@ -45,6 +45,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ChucVu
 
         private void UCChucVu_Load(object sender, EventArgs e)
         {
+            loadDataGirdView();
             pnlThongTin_ChucVu.Visible = false;
             dgvChucVu.Height = this.Height;
         }
@@ -115,9 +116,24 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ChucVu
             ClearText();
         }
 
+        private void loadDataGirdView()
+        {
+            DATA.SqlConn sql = new DATA.SqlConn();
+            dgvChucVu.DataSource = sql.getDataTable("ChucVu");
+        }
+
         private void btnLuu_GiaoVien_Click(object sender, EventArgs e)
         {
+            ENTITY.ChucVu cv = new ENTITY.ChucVu(txtMaChucVu.Text.Trim(), txtTenChucVu.Text.Trim());
+            DATA.ChucVu_Controler c = new DATA.ChucVu_Controler();
+            c.insertChucVu(cv);
+            loadDataGirdView();
             LockControl();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

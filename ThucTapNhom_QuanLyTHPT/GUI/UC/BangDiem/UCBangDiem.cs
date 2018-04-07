@@ -53,6 +53,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem
 
         private void UCBangDiem_Load(object sender, EventArgs e)
         {
+            loadDataGirdView();
             pnlThongTin_BangDiem.Visible = false;
             dgvBangDiem.Height = this.Height;
         }
@@ -138,8 +139,18 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem
             ClearText();
         }
 
+
+        private void loadDataGirdView()
+        {
+            DATA.SqlConn sql = new DATA.SqlConn();
+            dgvBangDiem.DataSource = sql.getDataTable("BangDiem");
+        }
         private void btnLuu_BangDiem_Click(object sender, EventArgs e)
         {
+            ENTITY.BangDiem bd = new ENTITY.BangDiem(txtMaHocSinh.Text.Trim(), txtMaGiaoVien.Text.Trim(), txtMaMonHoc.Text.Trim(), int.Parse(txtNamHoc.Text.Trim()), int.Parse(txtHocKy.Text.Trim()), float.Parse(txtDiemTrungBinh.Text.Trim()));
+            DATA.BangDiem_Controler b = new DATA.BangDiem_Controler();
+            b.insertBangDiem(bd);
+            loadDataGirdView();
             LockControl();
         }
     }

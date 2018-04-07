@@ -22,17 +22,18 @@ namespace ThucTapNhom_QuanLyTHPT.ENTITY
 
         public HocSinh(string maHocSinh, string hoTen, bool gioiTinh, 
             DateTime ngaySinh, string danToc, string tonGiao, 
-            string diaChi, string queQuan, string thongTinPhuHuynh, string maLop)
+            string diaChi, string queQuan, string thongTinPhuHuynh, string sdt, string maLop)
         {
-            MaHocSinh = maHocSinh;
+            this.MaHocSinh = maHocSinh;
             this.HoTen = hoTen;
             this.GioiTinh = gioiTinh;
             this.NgaySinh = ngaySinh;
             this.DanToc = danToc;
-            this.TonGiao = TonGiao;
+            this.TonGiao = tonGiao;
             this.DiaChi = diaChi;
             this.QueQuan = queQuan;
             this.ThongTinPhuHuynh = thongTinPhuHuynh;
+            this.SoDienThoaiLienHe = sdt;
             this.MaLop = maLop;
         }
     }
