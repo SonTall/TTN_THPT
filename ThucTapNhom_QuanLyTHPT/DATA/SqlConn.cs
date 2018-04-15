@@ -24,7 +24,7 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
         //    return conn;
         //}
 
-        string connString = @"Data Source=DESKTOP-DPEU76K;Initial Catalog=ThucTapNhom_QuanLyTruongTHPT;Integrated Security=True";
+        string connString = @"Data Source=HIEP\SQLEXPRESS;Initial Catalog=ThucTapNhom_QuanLyTruongTHPT;Integrated Security=True";
         SqlConnection conn = null;
 
         public SqlConnection Conn
@@ -66,5 +66,19 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
             cmd.Dispose();
             return dt;
         }
+
+        public DataTable searchQuery(string table, string x)
+        {
+            openConn();
+            string query = "select * from " + table + "where" + x;
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter db = new SqlDataAdapter(cmd);
+            DataTable dc = new DataTable();
+            db.Fill(dc);
+            db.Dispose();
+            cmd.Dispose();
+            return dc;
+        }
+
     }
 }
