@@ -102,7 +102,11 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ChucVu
 
         private void btnXoa_ChucVu_Click(object sender, EventArgs e)
         {
-
+            ENTITY.ChucVu cv = new ENTITY.ChucVu(txtMaChucVu.Text.Trim(), txtTenChucVu.Text.Trim());
+            DATA.ChucVu_Controler c = new DATA.ChucVu_Controler();
+            c.deleteChucVu(cv);
+            loadDataGirdView();
+            LockControl();
         }
 
         private void btnBack_GiaoVien_Click(object sender, EventArgs e)

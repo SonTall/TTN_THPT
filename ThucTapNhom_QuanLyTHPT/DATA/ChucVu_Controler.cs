@@ -19,5 +19,22 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
             cmd.Parameters.AddWithValue("@tencv", cv.TenChucVu);
             cmd.ExecuteNonQuery();
         }
+
+        public void deleteChucVu(ChucVu cv)
+        {
+            try
+            {
+                openConn();
+                String query = "delete from ChucVu where machucvu= @machucvu";
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@machucvu", cv.MaChucVu);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

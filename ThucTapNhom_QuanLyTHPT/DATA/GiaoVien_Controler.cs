@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using ThucTapNhom_QuanLyTHPT.ENTITY;
 
 namespace ThucTapNhom_QuanLyTHPT.DATA
@@ -26,6 +27,22 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
             cmd.Parameters.AddWithValue("@luongcoban", gv.LuongCoBan);
             cmd.Parameters.AddWithValue("@machucvu", gv.MaChucVu);
             cmd.ExecuteNonQuery();
+        }
+        public void deleteGiaoVien(GiaoVien gv)
+        {
+            try
+            {
+                openConn();
+                String query = "delete from GiaoVien where magiaovien= @magiaovien";
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@magiaovien", gv.MaGiaoVien);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message.ToString());
+            }
         }
     }
 }

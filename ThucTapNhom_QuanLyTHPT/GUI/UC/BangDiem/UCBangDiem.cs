@@ -102,11 +102,11 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem
             if (dgvBangDiem.Rows.Count > 0)
             {
                 txtMaHocSinh.Text = dgvBangDiem.SelectedRows[0].Cells[0].Value.ToString();
-                txtMaHocSinh.Text = dgvBangDiem.SelectedRows[0].Cells[1].Value.ToString();
-                txtMaMonHoc.Text = dgvBangDiem.SelectedRows[0].Cells[1].Value.ToString();
-                txtNamHoc.Text = dgvBangDiem.SelectedRows[0].Cells[1].Value.ToString();
-                txtHocKy.Text = dgvBangDiem.SelectedRows[0].Cells[1].Value.ToString();
-                txtDiemTrungBinh.Text = dgvBangDiem.SelectedRows[0].Cells[4].Value.ToString();
+                txtMaGiaoVien.Text = dgvBangDiem.SelectedRows[0].Cells[1].Value.ToString();
+                txtMaMonHoc.Text = dgvBangDiem.SelectedRows[0].Cells[2].Value.ToString();
+                txtNamHoc.Text = dgvBangDiem.SelectedRows[0].Cells[3].Value.ToString();
+                txtHocKy.Text = dgvBangDiem.SelectedRows[0].Cells[4].Value.ToString();
+                txtDiemTrungBinh.Text = dgvBangDiem.SelectedRows[0].Cells[5].Value.ToString();
             }
         }
 
@@ -125,6 +125,21 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem
 
         private void btnXoa_BangDiem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ENTITY.BangDiem bd = new ENTITY.BangDiem();
+                bd.MaHocSinh = txtMaHocSinh.Text.Trim();
+                bd.MaGiaoVien = txtMaGiaoVien.Text.Trim();
+                bd.MaMonHoc = txtMaMonHoc.Text.Trim();
+                DATA.BangDiem_Controler b = new DATA.BangDiem_Controler();
+                b.deleteBangDiem(bd);
+                loadDataGirdView();
+                LockControl();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
 
         }
 

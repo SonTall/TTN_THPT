@@ -212,5 +212,14 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.HocSinh
             loadDataGirdView();
             LockControl();
         }
+
+        private void btnXoa_HocSinh_Click(object sender, EventArgs e)
+        {
+            ENTITY.HocSinh hs = new ENTITY.HocSinh(txtMaHocSinh.Text.Trim(), txtHoTen.Text.Trim(), checkGioiTinh(), dtNgaySinh.Value, txtDanToc.Text.Trim(), txtTonGiao.Text.Trim(), txtDiaChi.Text.Trim(), txtQueQuan.Text.Trim(), txtThongTinPhuHuynh.Text.Trim(), txtSdtLienHe.Text.Trim(), txtMaLop.Text.Trim());
+            DATA.HocSinh_Controler h = new DATA.HocSinh_Controler();
+            h.deleteHocSinh(hs);
+            loadDataGirdView();
+            LockControl();
+        }
     }
 }

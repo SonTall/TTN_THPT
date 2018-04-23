@@ -111,7 +111,11 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc
 
         private void btnXoa_LopHoc_Click(object sender, EventArgs e)
         {
-
+            ENTITY.LopHoc l = new ENTITY.LopHoc(txtMaLopHoc.Text.Trim(), txtTenLopHoc.Text.Trim(), dtNgayBatDau.Value, dtNgayKetThuc.Value, txtMaGiaoVienChuNhiem.Text.Trim());
+            DATA.LopHoc_Controler lh = new DATA.LopHoc_Controler();
+            lh.deleteLop(l);
+            loadDataGirdView();
+            LockControl();
         }
 
         private void btnBack_LopHoc_Click(object sender, EventArgs e)
