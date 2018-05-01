@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThucTapNhom_QuanLyTHPT.DATA;
+using ThucTapNhom_QuanLyTHPT.ENTITY;
+using ThucTapNhom_QuanLyTHPT.DATA.EditData;
 
 namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiangDay
 {
@@ -120,6 +123,14 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiangDay
 
         private void btnSua_GiangDay_Click(object sender, EventArgs e)
         {
+            
+            EditthongtinGiangDay editthongtingiangday = new EditthongtinGiangDay();
+            ENTITY.GiangDay giangday = new ENTITY.GiangDay(txtMaGiaoVien.Text, txtMaLop.Text, txtMaMonHoc.Text, txtSoTiet.Text, txtThu.Text, txtTiet.Text);
+            try
+            {
+                editthongtingiangday.ExcuteProc(giangday);
+            }
+            catch (Exception _e)             {                 MessageBox.Show("Sửa thông tin Giang Day không thành công", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);             }
             OpenControl();
         }
 

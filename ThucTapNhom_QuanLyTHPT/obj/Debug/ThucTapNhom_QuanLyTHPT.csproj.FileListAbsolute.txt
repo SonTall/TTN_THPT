@@ -98,3 +98,21 @@ D:\Nam3_Ki2\Thực tập nhóm_TH14\GIT\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debu
 D:\Nam3_Ki2\Thực tập nhóm_TH14\GIT\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csproj.GenerateResource.Cache
 D:\Nam3_Ki2\Thực tập nhóm_TH14\GIT\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csproj.CoreCompileInputs.cache
 D:\Nam3_Ki2\Thực tập nhóm_TH14\GIT\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csproj.CopyComplete
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\bin\Debug\ThucTapNhom_QuanLyTHPT.exe.config
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.exe
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.pdb
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csprojResolveAssemblyReference.cache
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.FormMain.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem.UCBangDiem.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.ChucVu.UCChucVu.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.GiangDay.UCGiangDay.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.GiaoVien.UCGiaoVien.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.HocSinh.UCHocSinh.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.Home.UCHome.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc.UCLopHoc.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.MonHoc.UCMonHoc.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.ThongKe.UCThongKe.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.Properties.Resources.resources
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csproj.GenerateResource.Cache
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\bin\Debug\ThucTapNhom_QuanLyTHPT.exe
+C:\Users\asus\Desktop\ttnhom\TTN_THPT\ThucTapNhom_QuanLyTHPT\bin\Debug\ThucTapNhom_QuanLyTHPT.pdb

@@ -51,6 +51,13 @@
   <ItemGroup>
     <Compile Include="DATA\BangDiem_Controler.cs" />
     <Compile Include="DATA\ChucVu_Controler.cs" />
+    <Compile Include="DATA\EditData\EditLop.cs" />
+    <Compile Include="DATA\EditData\Editthongtinbangdiem.cs" />
+    <Compile Include="DATA\EditData\Editthongtinchucvu.cs" />
+    <Compile Include="DATA\EditData\EditthongtinGiangDay.cs" />
+    <Compile Include="DATA\EditData\EditthongtinGiaoVien.cs" />
+    <Compile Include="DATA\EditData\Editthongtinhocsinh.cs" />
+    <Compile Include="DATA\EditData\EditthongtinMonHoc.cs" />
     <Compile Include="DATA\GiangDay_Controler.cs" />
     <Compile Include="DATA\GiaoVien_Controler.cs" />
     <Compile Include="DATA\HocSinh_Controler.cs" />

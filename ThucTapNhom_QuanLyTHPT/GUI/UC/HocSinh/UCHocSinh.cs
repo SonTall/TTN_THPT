@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ThucTapNhom_QuanLyTHPT.DATA;
+using ThucTapNhom_QuanLyTHPT.ENTITY;
+using ThucTapNhom_QuanLyTHPT.DATA.EditData;
 namespace ThucTapNhom_QuanLyTHPT.GUI.UC.HocSinh
 {
     public partial class UCHocSinh : Form
@@ -182,6 +184,15 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.HocSinh
         private void btnSua_HocSinh_Click(object sender, EventArgs e)
         {
             OpenControl();
+            Editthongtinhocsinh editthongtinhocsinh = new Editthongtinhocsinh();
+            
+            ENTITY.HocSinh hocsinh = new ENTITY.HocSinh(txtMaHocSinh.Text, txtHoTen.Text, txtDanToc.Text, dtNgaySinh.Text, txtMaLop.Text, txtQueQuan.Text, txtTonGiao.Text,txtSdtLienHe.Text, txtThongTinPhuHuynh.Text, rbNam.Bottom, rbNu.Bottom, txtDiaChi.Text);
+
+            try
+            {
+                editthongtinhocsinh.ExcuteProc(hocsinh);
+            }
+            catch (Exception _e)             {                 MessageBox.Show("Sửa thông tin học sinh không thành công", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);             }
         }
 
         private void loadDataGirdView()

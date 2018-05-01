@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThucTapNhom_QuanLyTHPT.DATA;
+using ThucTapNhom_QuanLyTHPT.ENTITY;
+using ThucTapNhom_QuanLyTHPT.DATA.EditData;
 
 namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ChucVu
 {
@@ -98,6 +101,14 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ChucVu
         private void btnSua_ChucVu_Click(object sender, EventArgs e)
         {
             OpenControl();
+            Editthongtinchucvu editthongtinchucvu = new Editthongtinchucvu();
+            ENTITY.ChucVu chucvu = new ENTITY.ChucVu(txtMaChucVu.Text, txtTenChucVu.Text);
+
+            try
+            {
+                editthongtinchucvu.ExcuteProc(chucvu);
+            }
+            catch (Exception _e)             {                 MessageBox.Show("Sửa thông tin chức vụ không thành công", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);             }
         }
 
         private void btnXoa_ChucVu_Click(object sender, EventArgs e)

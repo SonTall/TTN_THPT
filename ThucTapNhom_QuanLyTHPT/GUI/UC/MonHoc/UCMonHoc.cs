@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThucTapNhom_QuanLyTHPT.DATA;
+using ThucTapNhom_QuanLyTHPT.ENTITY;
+using ThucTapNhom_QuanLyTHPT.DATA.EditData;
 
 namespace ThucTapNhom_QuanLyTHPT.GUI.UC.MonHoc
 {
@@ -89,6 +92,10 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.MonHoc
         private void btnSua_MonHoc_Click(object sender, EventArgs e)
         {
             OpenControl();
+            EditthongtinMonHoc editThongtinmonhoc = new EditthongtinMonHoc();
+            ENTITY.MonHoc monhoc = new ENTITY.MonHoc(txtMaMonHoc.Text, txtTenMonHoc.Text);
+
+            try             {                 editThongtinmonhoc.ExcuteProc(monhoc);             }             catch (Exception _e)             {                 MessageBox.Show("Sửa thông tin môn học không thành công", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);             }
         }
 
         private void btnXoa_MonHoc_Click(object sender, EventArgs e)

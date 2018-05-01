@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ThucTapNhom_QuanLyTHPT.DATA;
+using ThucTapNhom_QuanLyTHPT.ENTITY;
+using ThucTapNhom_QuanLyTHPT.DATA.EditData;
 namespace ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem
 {
     public partial class UCBangDiem : Form
@@ -121,6 +123,15 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem
         private void btnSua_BangDiem_Click(object sender, EventArgs e)
         {
             OpenControl();
+            Editthongtinbangdiem editthongtinbangdiem = new Editthongtinbangdiem();
+            OpenControl();
+            ENTITY.BangDiem bangdiem = new ENTITY.BangDiem(txtDiemTrungBinh.Text, txtHocKy.Text, txtMaGiaoVien.Text, txtMaHocSinh.Text, txtMaMonHoc.Text, txtNamHoc.Text);
+
+            try
+            {
+                editthongtinbangdiem.ExcuteProc(bangdiem);
+            }
+            catch (Exception _e)             {                 MessageBox.Show("Sửa thông tin bảng điểm không thành công", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);             }
         }
 
         private void btnXoa_BangDiem_Click(object sender, EventArgs e)

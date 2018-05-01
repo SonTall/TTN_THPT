@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThucTapNhom_QuanLyTHPT.DATA;
+using ThucTapNhom_QuanLyTHPT.ENTITY;
+using ThucTapNhom_QuanLyTHPT.DATA.EditData;
 
 namespace ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc
 {
@@ -107,6 +110,15 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc
         private void btnSua_LopHoc_Click(object sender, EventArgs e)
         {
             OpenControl();
+            EditLop editthongtinlop = new EditLop();
+           
+            ENTITY.LopHoc lop = new ENTITY.LopHoc(txtMaLopHoc.Text, txtTenLopHoc.Text, dtNgayBatDau.Text, dtNgayKetThuc.Text, txtMaGiaoVienChuNhiem.Text);
+
+            try
+            {
+                editthongtinlop.ExcuteProc(lop);
+            }
+            catch (Exception _e)             {                 MessageBox.Show("Sửa thông tin lớp học không thành công", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);             }
         }
 
         private void btnXoa_LopHoc_Click(object sender, EventArgs e)

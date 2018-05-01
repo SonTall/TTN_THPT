@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ThucTapNhom_QuanLyTHPT.DATA;
+using ThucTapNhom_QuanLyTHPT.ENTITY;
+using ThucTapNhom_QuanLyTHPT.DATA.EditData;
 
 namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiaoVien
 {
@@ -144,6 +147,14 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiaoVien
         private void btnSua_GiaoVien_Click(object sender, EventArgs e)
         {
             OpenControl();
+            EditthongtinGiaoVien editthongtingiaovien = new EditthongtinGiaoVien();
+            ENTITY.GiaoVien giaovien = new ENTITY.GiaoVien(txtMaGiaoVien.Text, txtTenGiaoVien.Text, dtNgaySinh.Text, txtDiaChi.Text, txtQueQuan.Text, txtSdt.Text, txtTrinhDo.Text, txtLuongCoBan.Text, txtMaChucVu.Text, rbNam.Bottom, rbNu.Bottom);
+
+            try
+            {
+                editthongtingiaovien.ExcuteProc(giaovien);
+            }
+            catch (Exception _e)             {                 MessageBox.Show("Sửa thông tin giáo viên không thành công", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);             }
         }
 
         private void btnXoa_GiaoVien_Click(object sender, EventArgs e)
