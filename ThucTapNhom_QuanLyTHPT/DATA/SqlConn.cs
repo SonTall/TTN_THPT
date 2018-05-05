@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ThucTapNhom_QuanLyTHPT.DATA
 {
     class SqlConn
@@ -24,7 +25,7 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
         //    return conn;
         //}
 
-        string connString = @"Data Source=DESKTOP-OL224K9\SQLEXPRESS;Initial Catalog=ThucTapNhom_QuanLyTruongTHPT;Integrated Security=True";
+        string connString = @"Data Source=DESKTOP-NE70A7B\SQLEXPRESS;Initial Catalog=ThucTapNhom_QuanLyTruongTHPT;Integrated Security=True";
         SqlConnection conn = null;
 
         public SqlConnection Conn
@@ -67,6 +68,8 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
             return dt;
         }
 
+
+
         public DataTable searchQuery(string table, string x)
         {
             openConn();
@@ -80,5 +83,17 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
             return dc;
         }
 
+        public DataTable TK(string cl)
+        {
+            openConn();
+            string query = cl;
+            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlDataAdapter dh = new SqlDataAdapter(cmd);
+            DataTable dk = new DataTable();
+            dh.Fill(dk);
+            dh.Dispose();
+            cmd.Dispose();
+            return dk;
+        }
     }
 }

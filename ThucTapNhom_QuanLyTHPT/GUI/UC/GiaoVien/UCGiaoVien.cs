@@ -148,12 +148,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiaoVien
 
         private void btnXoa_GiaoVien_Click(object sender, EventArgs e)
         {
-            ENTITY.GiaoVien gv = new ENTITY.GiaoVien(txtMaGiaoVien.Text.Trim(), txtTenGiaoVien.Text.Trim(), checkGioiTinh(), dtNgaySinh.Value, txtDiaChi.Text.Trim(), txtQueQuan.Text.Trim(), txtSdt.Text.Trim(), txtTrinhDo.Text.Trim(), float.Parse(txtLuongCoBan.Text.Trim()), txtMaChucVu.Text.Trim());
-            DATA.GiaoVien_Controler g = new DATA.GiaoVien_Controler();
-            DATA.ChucVu_Controler c = new DATA.ChucVu_Controler();
-            g.deleteGiaoVien(gv);
-            loadDataGirdView();
-            LockControl();
+
         }
 
         private void btnBack_GiaoVien_Click(object sender, EventArgs e)

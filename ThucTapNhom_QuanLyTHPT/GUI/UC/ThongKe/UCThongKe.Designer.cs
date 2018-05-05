@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UCThongKe));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn = new System.Windows.Forms.Button();
+            this.lbThongKe = new System.Windows.Forms.Label();
             this.cbOption_ThongKe = new System.Windows.Forms.ComboBox();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.dgvThongKe = new System.Windows.Forms.DataGridView();
-            this.lbThongKe = new System.Windows.Forms.Label();
-            this.btn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongKe)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,31 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1171, 69);
             this.panel1.TabIndex = 8;
+            // 
+            // btn
+            // 
+            this.btn.BackColor = System.Drawing.SystemColors.Control;
+            this.btn.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
+            this.btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
+            this.btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
+            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.Location = new System.Drawing.Point(999, 19);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(146, 32);
+            this.btn.TabIndex = 6;
+            this.btn.Text = "In danh sách";
+            this.btn.UseVisualStyleBackColor = false;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // lbThongKe
+            // 
+            this.lbThongKe.AutoSize = true;
+            this.lbThongKe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbThongKe.Location = new System.Drawing.Point(782, 25);
+            this.lbThongKe.Name = "lbThongKe";
+            this.lbThongKe.Size = new System.Drawing.Size(0, 21);
+            this.lbThongKe.TabIndex = 3;
             // 
             // cbOption_ThongKe
             // 
@@ -86,16 +111,17 @@
             // 
             this.dgvThongKe.AllowUserToAddRows = false;
             this.dgvThongKe.AllowUserToDeleteRows = false;
+            this.dgvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvThongKe.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvThongKe.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvThongKe.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvThongKe.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvThongKe.Location = new System.Drawing.Point(0, 69);
             this.dgvThongKe.Name = "dgvThongKe";
@@ -107,31 +133,7 @@
             this.dgvThongKe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvThongKe.Size = new System.Drawing.Size(1171, 541);
             this.dgvThongKe.TabIndex = 10;
-            // 
-            // lbThongKe
-            // 
-            this.lbThongKe.AutoSize = true;
-            this.lbThongKe.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbThongKe.Location = new System.Drawing.Point(782, 25);
-            this.lbThongKe.Name = "lbThongKe";
-            this.lbThongKe.Size = new System.Drawing.Size(0, 21);
-            this.lbThongKe.TabIndex = 3;
-            // 
-            // btn
-            // 
-            this.btn.BackColor = System.Drawing.SystemColors.Control;
-            this.btn.FlatAppearance.BorderColor = System.Drawing.Color.Tomato;
-            this.btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Tomato;
-            this.btn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Tomato;
-            this.btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn.Location = new System.Drawing.Point(999, 19);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(146, 32);
-            this.btn.TabIndex = 6;
-            this.btn.Text = "In danh sách";
-            this.btn.UseVisualStyleBackColor = false;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
+            this.dgvThongKe.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvThongKe_CellContentClick);
             // 
             // UCThongKe
             // 

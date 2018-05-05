@@ -28,22 +28,5 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
             cmd.Parameters.AddWithValue("@malop", hs.MaLop);
             cmd.ExecuteNonQuery();
         }
-
-        public void deleteHocSinh(HocSinh hs)
-        {
-            try
-            {
-                openConn();
-                String query = "delete from HocSinh where mahocsinh= @mahocsinh";
-                SqlCommand cmd = new SqlCommand(query, Conn);
-                cmd.Parameters.AddWithValue("@mahocsinh", hs.MaHocSinh);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
     }
 }

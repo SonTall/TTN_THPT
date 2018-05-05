@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ThongKe
 {
     public partial class UCThongKe : Form
     {
+
         public UCThongKe()
         {
             InitializeComponent();
+            DataGridViewColStyle();
         }
 
         //Học sinh - Lớp Học
@@ -28,7 +31,9 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ThongKe
             // thong ke ae tu. them cot vao nhe', t k them truoc' duoc.
         private void UCThongKe_Load(object sender, EventArgs e)
         {
-            DataGridViewColStyle();
+            loadDataGirdView();
+            dgvThongKe.AutoResizeColumns();
+            dgvThongKe.AutoResizeRows();
         }
 
         private void DataGridViewColStyle()
@@ -62,57 +67,65 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ThongKe
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            if(cbOption_ThongKe.Text.Equals("Học sinh - Lớp Học"))
+            dgvThongKe.Height = 362;
+            if (cbOption_ThongKe.Text.Equals("Học sinh - Lớp Học"))
             {
-                //test func
-                AddColumn("hocsinh", "colhocsonh", 150, "hocsinh", DataGridViewAutoSizeColumnMode.Fill);
-
-
-                #region testdata
-                for (int i = 0; i < 30; i++)
-                {
-                    dgvThongKe.Rows.Add();
-                    dgvThongKe.Rows[i].Cells[0].Value = "haha";
-                }
-                #endregion
-
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                dgvThongKe.DataSource = sql.TK("select a.mahocsinh,a.hoten,a.diachi,b.tenlop from HocSinh as a,Lop as b where a.malop = b.malop");
+                dgvThongKe.AutoResizeColumns();
+                dgvThongKe.AutoResizeRows();
             }
 
             if (cbOption_ThongKe.Text.Equals("Giáo Viên - Chức Vụ"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                dgvThongKe.DataSource = sql.TK("select a.magiaovien,a.tengiaovien,a.trinhdo,b.tenchucvu,a.sdt from GiaoVien as a, ChucVu as b where a.machucvu=b.machucvu");
             }
 
             if (cbOption_ThongKe.Text.Equals("Danh sách môn học"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                dgvThongKe.DataSource = sql.TK("select a.mamonhoc,a.tenmonhoc,b.malop,b.sotiet,b.thu,b.tiet from MonHoc as a,GiangDay as b where a.mamonhoc=b.mamonhoc");
             }
 
             if (cbOption_ThongKe.Text.Equals("Số lượng học sinh theo lớp"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                dgvThongKe.DataSource = sql.TK("select b.malop,b.tenlop,count(a.mahocsinh) as 'sohocsinh' from HocSinh as a,Lop as b where a.malop=b.malop group by b.malop, b.tenlop");
             }
 
             if (cbOption_ThongKe.Text.Equals("Số giáo viên theo chức vụ"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                dgvThongKe.DataSource = sql.TK("select b.machucvu,b.tenchucvu,count(a.magiaovien) as 'sogiaovien' from GiaoVien as a,ChucVu as b where a.machucvu=b.machucvu group by b.machucvu, b.tenchucvu");
             }
 
             if (cbOption_ThongKe.Text.Equals("Học lực của học sinh theo học kỳ"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                dgvThongKe.DataSource = sql.TK("select b.hocki,a.mahocsinh,a.hoten,b.mamonhoc,b.diemtrungbinh from HocSinh as a,BangDiem as b where a.mahocsinh=b.mahocsinh");
             }
 
             if (cbOption_ThongKe.Text.Equals("Sô tiết dạy của giáo viên trong 1 tuần"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                dgvThongKe.DataSource = sql.TK("select a.magiaovien,a.tengiaovien,count(b.sotiet) as 'soluongtiet' from GiaoVien as a,GiangDay as b where a.magiaovien=b.magiaovien group by a.magiaovien, a.tengiaovien");
             }
+        }
+
+        private void loadDataGirdView()
+        {
+            DATA.SqlConn sql = new DATA.SqlConn();
         }
 
         private void btn_Click(object sender, EventArgs e)
         {
-            lbThongKe.Text = "Để cho đẹp thôi =))";
+            
+        }
+
+        private void dgvThongKe_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

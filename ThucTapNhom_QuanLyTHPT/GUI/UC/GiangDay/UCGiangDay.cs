@@ -125,11 +125,7 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiangDay
 
         private void btnXoa_GiangDay_Click(object sender, EventArgs e)
         {
-            ENTITY.GiangDay gd = new ENTITY.GiangDay(txtMaGiaoVien.Text.Trim(), txtMaLop.Text.Trim(), txtMaMonHoc.Text.Trim(), txtThu.Text.Trim(), int.Parse(txtTiet.Text.Trim()), int.Parse(txtSoTiet.Text.Trim()));
-            DATA.GiangDay_Controler g = new DATA.GiangDay_Controler();
-            g.deleteGiangDay(gd);
-            loadDataGirdView();
-            LockControl();
+
         }
 
         private void btnBack_GiangDay_Click(object sender, EventArgs e)
