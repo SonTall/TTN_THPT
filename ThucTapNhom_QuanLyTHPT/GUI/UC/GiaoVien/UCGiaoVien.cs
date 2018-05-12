@@ -98,17 +98,29 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiaoVien
 
             if (cbOption_GiaoVien.Text.Equals("Mã giáo viên"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "GiaoVien";
+                string key = "magiaovien";
+                dgvGiaoVien.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_GiaoVien.Text.Trim() + "%'");
+                LockControl();
             }
 
             if (cbOption_GiaoVien.Text.Equals("Tên giáo viên"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "GiaoVien";
+                string key = "tengiaovien";
+                dgvGiaoVien.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_GiaoVien.Text.Trim() + "%'");
+                LockControl();
             }
 
             if (cbOption_GiaoVien.Text.Equals("Mã chức vụ"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "GiaoVien";
+                string key = "machucvu";
+                dgvGiaoVien.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_GiaoVien.Text.Trim() + "%'");
+                LockControl();
             }
         }
 

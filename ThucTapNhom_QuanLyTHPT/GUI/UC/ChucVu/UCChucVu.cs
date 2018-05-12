@@ -70,7 +70,11 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.ChucVu
 
             if (cbOption_ChucVu.Text.Equals("Mã chức vụ"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "ChucVu";
+                string key = "machucvu";
+                dgvChucVu.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_ChucVu.Text.Trim() + "%'");
+                LockControl();
             }
         }
 

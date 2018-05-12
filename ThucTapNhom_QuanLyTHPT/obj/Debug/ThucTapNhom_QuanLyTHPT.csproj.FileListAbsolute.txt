@@ -96,3 +96,23 @@ D:\Nam 3 Ki 2\TT Nhóm\SonCao\TTN_THPT-master\ThucTapNhom_QuanLyTHPT\obj\Debug\T
 D:\Nam 3 Ki 2\TT Nhóm\SonCao\TTN_THPT-master\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.ThongKe.UCThongKe.resources
 D:\Nam 3 Ki 2\TT Nhóm\SonCao\TTN_THPT-master\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.Properties.Resources.resources
 D:\Nam 3 Ki 2\TT Nhóm\SonCao\TTN_THPT-master\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csproj.GenerateResource.Cache
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\bin\Debug\ThucTapNhom_QuanLyTHPT.exe.config
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\bin\Debug\ThucTapNhom_QuanLyTHPT.exe
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\bin\Debug\ThucTapNhom_QuanLyTHPT.pdb
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csprojResolveAssemblyReference.cache
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.FormMain.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem.UCBangDiem.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.ChucVu.UCChucVu.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.GiangDay.UCGiangDay.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.GiaoVien.UCGiaoVien.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.HocSinh.UCHocSinh.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.Home.UCHome.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc.UCLopHoc.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.MonHoc.UCMonHoc.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.GUI.UC.ThongKe.UCThongKe.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.Properties.Resources.resources
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csproj.GenerateResource.cache
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csproj.CoreCompileInputs.cache
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.csproj.CopyComplete
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.exe
+C:\Users\Hiep\Desktop\bai 2 mới\TTN_THPT\ThucTapNhom_QuanLyTHPT\obj\Debug\ThucTapNhom_QuanLyTHPT.pdb

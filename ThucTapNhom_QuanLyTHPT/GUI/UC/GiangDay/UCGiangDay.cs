@@ -79,17 +79,29 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.GiangDay
 
             if (cbOption_GiangDay.Text.Equals("Mã giáo viên"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "GiangDay";
+                string key = "magiaovien";
+                dgvGiangDay.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_GiangDay.Text.Trim() + "%'");
+                LockControl();
             }
 
             if (cbOption_GiangDay.Text.Equals("Mã lớp học"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "GiangDay";
+                string key = "malop";
+                dgvGiangDay.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_GiangDay.Text.Trim() + "%'");
+                LockControl();
             }
 
             if (cbOption_GiangDay.Text.Equals("Mã môn học"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "GiangDay";
+                string key = "mamonhoc";
+                dgvGiangDay.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_GiangDay.Text.Trim() + "%'");
+                LockControl();
             }
         }
 

@@ -79,17 +79,29 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem
 
             if (cbOption_BangDiem.Text.Equals("Mã học sinh"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "BangDiem";
+                string key = "mahocsinh";
+                dgvBangDiem.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_BangDiem.Text.Trim() + "%'");
+                LockControl();
             }
 
             if (cbOption_BangDiem.Text.Equals("Mã giáo viên"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "BangDiem";
+                string key = "magiaovien";
+                dgvBangDiem.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_BangDiem.Text.Trim() + "%'");
+                LockControl();
             }
 
             if (cbOption_BangDiem.Text.Equals("Mã môn học"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "BangDiem";
+                string key = "mamonhoc";
+                dgvBangDiem.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_BangDiem.Text.Trim() + "%'");
+                LockControl();
             }
         }
 

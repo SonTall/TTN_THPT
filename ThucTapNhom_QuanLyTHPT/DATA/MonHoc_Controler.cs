@@ -6,6 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using ThucTapNhom_QuanLyTHPT.ENTITY;
 
+
+
+
 namespace ThucTapNhom_QuanLyTHPT.DATA
 {
     class MonHoc_Controler : SqlConn

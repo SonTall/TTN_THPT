@@ -69,16 +69,22 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.LopHoc
             dgvLopHoc.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             dgvLopHoc.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
         }
-
+        // phan search
+        
         private void btnSearch_LopHoc_Click(object sender, EventArgs e)
         {
             if (cbOption_LopHoc.Text.Equals("")) MessageBox.Show("Chọn tiêu chí cần sắp xếp", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             if (cbOption_LopHoc.Text.Equals("Mã lớp học"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "Lop";
+                string key = "malop";
+                dgvLopHoc.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_LopHoc.Text.Trim() + "%'");
+                LockControl();
             }
         }
+//
 
         private void dgvLopHoc_MouseClick(object sender, MouseEventArgs e)
         {

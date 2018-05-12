@@ -123,21 +123,16 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.MonHoc
         }
 
 //phan search 
-        private void loadDataGirdView2()
-        {
-            DATA.SqlConn sql = new DATA.SqlConn();
-            string key = "mamonhoc";
-            string a = key + "Like '%" + txtMaMonHoc.Text.Trim() +"%' ";
-            dgvMonHoc.DataSource = sql.searchQuery("MonHoc",a);
-        }
-
         private void btnSearch_MonHoc_Click(object sender, EventArgs e)
         {
             if (cbOption_MonHoc.Text.Equals("")) MessageBox.Show("Chọn tiêu chí cần sắp xếp", "ERROR!!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             if (cbOption_MonHoc.Text.Equals("Mã môn học"))
             {
-                loadDataGirdView2();
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "MonHoc";
+                string key = "mamonhoc";
+                dgvMonHoc.DataSource = sql.searchQuery("select * from " + tb + " where " + key +" Like '%" + txtSearch_MonHoc.Text.Trim() + "%'");
                 LockControl();
             }
         }

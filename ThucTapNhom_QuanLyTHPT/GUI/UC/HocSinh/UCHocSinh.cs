@@ -124,17 +124,29 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.HocSinh
 
             if (cbOption.Text.Equals("Mã học sinh"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "HocSinh";
+                string key = "mahocsinh";
+                dgvHocSinh.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_HocSinh.Text.Trim() + "%'");
+                LockControl();
             }
             
             if (cbOption.Text.Equals("Tên học sinh"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "HocSinh";
+                string key = "hoten";
+                dgvHocSinh.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_HocSinh.Text.Trim() + "%'");
+                LockControl();
             }
 
             if (cbOption.Text.Equals("Mã lớp"))
             {
-
+                DATA.SqlConn sql = new DATA.SqlConn();
+                string tb = "HocSinh";
+                string key = "malop";
+                dgvHocSinh.DataSource = sql.searchQuery("select * from " + tb + " where " + key + " Like '%" + txtSearch_HocSinh.Text.Trim() + "%'");
+                LockControl();
             }
         }
 

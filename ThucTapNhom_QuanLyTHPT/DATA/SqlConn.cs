@@ -25,7 +25,7 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
         //    return conn;
         //}
 
-        string connString = @"Data Source=DESKTOP-NE70A7B\SQLEXPRESS;Initial Catalog=ThucTapNhom_QuanLyTruongTHPT;Integrated Security=True";
+        string connString = @"Data Source=HIEP\SQLEXPRESS;Initial Catalog=ThucTapNhom_QuanLyTruongTHPT;Integrated Security=True";
         SqlConnection conn = null;
 
         public SqlConnection Conn
@@ -69,11 +69,10 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
         }
 
 
-
-        public DataTable searchQuery(string table, string x)
+        public DataTable searchQuery(string x)
         {
             openConn();
-            string query = "select * from " + table + "where" + x;
+            string query = x;
             SqlCommand cmd = new SqlCommand(query, conn);
             SqlDataAdapter db = new SqlDataAdapter(cmd);
             DataTable dc = new DataTable();
