@@ -137,7 +137,23 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.BangDiem
 
         private void btnXoa_BangDiem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                ENTITY.BangDiem bd = new ENTITY.BangDiem();
+                bd.MaHocSinh = 
+                bd.MaGiaoVien = txtMaGiaoVien.Text.Trim();
+                bd.MaMonHoc = txtMaMonHoc.Text.Trim();
+                DATA.BangDiem_Controler b = new DATA.BangDiem_Controler();
+                b.deleteBangDiem(bd);
+                loadDataGirdView();
+                LockControl();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error");
+            }
+            loadDataGirdView();
+            LockControl();
         }
 
         private void btnBack_BangDiem_Click(object sender, EventArgs e)

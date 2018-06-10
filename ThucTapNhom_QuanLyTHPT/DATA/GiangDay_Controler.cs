@@ -23,5 +23,25 @@ namespace ThucTapNhom_QuanLyTHPT.DATA
             cmd.Parameters.AddWithValue("@sotiet", d.SoTiet);
             cmd.ExecuteNonQuery();
         }
+        public void deleteGiangDay(GiangDay gd)
+        {
+            try
+            {
+                openConn();
+                String query = "delete from GiangDay where malop= @malop and magiaovien = @magiaovien and mamonhoc=@mamonhoc and thu=@thu and tiet=@tiet ";
+                SqlCommand cmd = new SqlCommand(query, Conn);
+                cmd.Parameters.AddWithValue("@malop", gd.MaLopHoc);
+                cmd.Parameters.AddWithValue("@magiaovien", gd.MaGiaoVien);
+                cmd.Parameters.AddWithValue("@mamonhoc", gd.MaMonHoc);
+                cmd.Parameters.AddWithValue("@thu", gd.Thu);
+                cmd.Parameters.AddWithValue("@tiet", gd.Tiet);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception msg)
+            {
+
+               
+            }
+        }
     }
 }

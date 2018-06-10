@@ -121,6 +121,7 @@
             this.btnXoa_HocSinh.TabIndex = 5;
             this.btnXoa_HocSinh.Text = "Xóa";
             this.btnXoa_HocSinh.UseVisualStyleBackColor = false;
+            this.btnXoa_HocSinh.Click += new System.EventHandler(this.btnXoa_HocSinh_Click);
             // 
             // btnSua_HocSinh
             // 

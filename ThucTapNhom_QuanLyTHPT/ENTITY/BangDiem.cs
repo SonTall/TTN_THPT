@@ -25,5 +25,6 @@ namespace ThucTapNhom_QuanLyTHPT.ENTITY
             this.HocKy = hocKy;
             this.DiemTrungBinh = diemTrungBinh;
         }
+        public BangDiem() { }
     }
 }

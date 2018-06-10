@@ -93,7 +93,11 @@ namespace ThucTapNhom_QuanLyTHPT.GUI.UC.MonHoc
 
         private void btnXoa_MonHoc_Click(object sender, EventArgs e)
         {
-
+            ENTITY.MonHoc mh = new ENTITY.MonHoc(txtMaMonHoc.Text.Trim(), txtTenMonHoc.Text.Trim());
+            DATA.MonHoc_Controler m = new DATA.MonHoc_Controler();
+            m.deleteMonHoc(mh);
+            loadDataGirdView();
+            LockControl();
         }
 
         private void btnBack_MonHoc_Click(object sender, EventArgs e)
